@@ -98,18 +98,59 @@
           project built in Blender</li>
 
           <li><a href="synchrotron.stl">synchrotron.stl</a> - an export of the
-          model in STL format for further processing (to generate this yourself,
-          open synchrotron.blend in Blender, select the main model, select File /
-          Export / STL)</li>
+          model in STL format for further processing. The method for generating
+          this is:
+            <ul>
+              <li>open synchrotron.blend in Blender</li>
+              <li>select the main model (right click on the object)</li>
+              <li>select File / Export / STL</li>
+            </ul>
+          </li>
 
           <li><a href="synchrotron.scad">synchrotron.scad</a> - an OpenSCAD script
           used to take 2D slices from the model for ShopBot</li>
 
           <li><a href="synchrotron_top.dxf">synchrotron_top.dxf</a> - a slice
-          through the top of the model in Autodesk DXF format</li>
+          through the top of the model in Autodesk DXF format. The method for
+          generating this is:
+            <ul>
+              <li>open synchrotron.scad in OpenSCAD</li>
+              <li>ensure the second projection line is commented</li>
+              <li>select Design / Compile and Render (F6)</li>
+              <li>select Design / Export STL</li>
+            </ul>
+          </li>
 
-          <li><a href="synchrotron_bottom.dxf">synchrotron_bottom.dxf</a> - a slice
-          through the bottom of the model in Autodesk DXF format</li>
+          <li><a href="synchrotron_bottom.dxf">synchrotron_bottom.dxf</a> - a
+          slice through the bottom of the model in Autodesk DXF format. The
+          method for generating this is the same as synchrotron_top above, but
+          ensure the first projection line is commented before compiling and
+          rendering as STL.</li>
+
+          <li><a href="synchrotron_top.svg">synchrotron_top.svg</a> - SVG
+          conversion of the DXF file. The method for generating this is:
+            <ul>
+              <li>import synchrotron_top.dxf in Inkscape</li>
+              <li>ungroup the imported object (Ctrl+Shift+G)</li>
+              <li>select Path / Combine while all objects are still
+              selected</li>
+              <li>switch to the node tool (F2), and press Ctrl+A to select all
+              nodes</li>
+              <li>click Join Selected Nodes on the toolbar; at this point
+              instead of having lots of separate lines you'll now have one
+              coherent path with several subpaths but the directions of the
+              sub-paths will be incorrect for filling</li>
+              <li>starting at the outer-most subpath, select a single node on
+              the subpath within it and select Path / Reverse; continue doing
+              this for each subpath working your way inwards</li>
+              <li>finally, switch back to object selection (F1), open the Fill
+              and Stroke toolbox and apply a fill</li>
+            </ul>
+          </li>
+
+          <li><a href="synchrotron_bottom.svg">synchrotron_bottom.svg</a> - an
+          SVG conversion of the synchrotron_bottom.dxf file. This is produced
+          in the same way as the top version.</li>
         </ul>
 
         <p>All files in this project are also available from <a
