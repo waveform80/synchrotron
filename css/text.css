@@ -1,0 +1,60 @@
+/*=======================================================================
+
+	❤❤❤ Gumby by Digital Surgeons. ❤❤❤
+	
+	*** This is where you should keep all of your TEXT styles ***
+
+ ========================================================================*/
+
+h1 {
+  font: bold 48px georgia, times new roman, serif;
+  color: #fff;
+  letter-spacing: -.05em;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+
+p, li {
+  font: 16px sans, sans-serif;
+  color: black;
+}
+
+ul li {
+  list-style: disc;
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+.foot p {
+  color: #777;
+  font-size: 10pt;
+}
+
+a { color: #47b; }
+
+a:hover {
+  color: #47b;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font: bold 36px 'Lustria', times new roman, serif;
+  }
+}
+
+ /* ==|== media queries ======================================================
+    PLACEHOLDER Media Queries for Responsive Design.
+    These override the primary ('mobile first') styles
+    Modify as content requires.
+    ========================================================================== */
+
+ @media only screen and (min-width: 480px) {
+   /* Style adjustments for viewports 480px and over go here */
+
+ }
+
+ @media only screen and (min-width: 768px) {
+   /* Style adjustments for viewports 768px and over go here */
+
+ }
