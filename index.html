@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Model Synchrotron</title>
+  </head>
+  <body>
+    <h1>Model Synchrotron</title>
+    <p>This project is about building a model of a particle acclerator,
+    specifically the <a href="http://www.diamond.ac.uk/">Diamond Radiation
+      Light Source</a>. The model will hopefully use a ball-bearing to
+    represent the photons in the ring, with holding solenoids used to draw it
+    around. LED strips will be used to represent the beam-lines, and both the
+    accelerator and storage rings will be represented.</P>
+
+    <p>The following software was used in this project:</p>
+
+    <ul>
+      <li><a href="http://www.blender.org/">Blender</a> - for 3D modelling</li>
+
+      <li><a href="http://www.openscad.org/">OpenSCAD</a> - for 3D to 2D
+      projections</li>
+
+      <li><a href="http://www.inkscape.org/">Inkscape</a> - for post-processing
+      of the 2D projection</li>
+
+      <li><a href="http://www.ubuntu.com/">Ubuntu Linux</a> - everything was
+      run under Ubuntu Linux (specifically 12.04 LTS)</li>
+    </ul>
+
+    <p>The following files were produced as part of this project:</p>
+
+    <ul>
+      <li><a href="synchrotron.blend">synchrotron.blend</a> - a 3D model of the
+      project built in Blender</li>
+
+      <li><a href="synchrotron.stl">synchrotron.stl</a> - an export of the
+      model in STL format for further processing (to generate this yourself,
+      open synchrotron.blend in Blender, select the main model, select File /
+      Export / STL)</li>
+
+      <li><a href="synchrotron.scad">synchrotron.scad</a> - an OpenSCAD script
+      used to take 2D slices from the model for ShopBot</li>
+
+      <li><a href="synchrotron_top.dxf">synchrotron_top.dxf</a> - a slice
+      through the top of the model in Autodesk DXF format</li>
+
+      <li><a href="synchrotron_bottom.dxf">synchrotron_bottom.dxf</a> - a slice
+      through the bottom of the model in Autodesk DXF format</li>
+    </ul>
+
+  </body>
+</html>
