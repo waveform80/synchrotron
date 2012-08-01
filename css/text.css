@@ -14,6 +14,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-size: 24px;
+}
+
 p, li {
   font: 16px sans, sans-serif;
   color: black;
