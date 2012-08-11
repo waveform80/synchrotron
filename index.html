@@ -41,11 +41,13 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="twelve columns head">
-        <h1>FabLab Synchrotron Project</h1>
+    <header>
+      <div class="row">
+        <div class="twelve columns head">
+          <h1>FabLab Synchrotron Project</h1>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div class="row">
       <div class="five columns">
@@ -72,9 +74,10 @@
 
     <div class="row">
       <div class="twelve columns">
+        <h2>Files</h2>
         <p>The following files were produced as part of this project:</p>
 
-        <ul>
+        <ol class="rounded-list">
           <li><a href="synchrotron.dxf">synchrotron.dxf</a> - the 2D design of
           the model base, constructed in LibreCAD</li>
 
@@ -82,14 +85,12 @@
           script performing extrusion of the 2D design into the 3D model</li>
 
           <li><a href="synchrotron.stl">synchrotron.stl</a> - this is the 3D
-          output of the OpenSCAD script; to produce it yourself, open the
-          synchrotron.scad script in OpenSCAD and press F6 to render it, then
-          select Design / Export STL</li>
+          output of the OpenSCAD script</li>
 
           <li><a href="synchrotron.blend">synchrotron.blend</a> - this is a
           Blender scene containing the extruded 3D model with some textures and
           a light and camera for rendering</li>
-        </ul>
+        </ol>
 
         <p>All files in this project are also available from <a
           href="https://github.com/waveform80/synchrotron">GitHub</a>.</p>
@@ -99,9 +100,10 @@
 
     <div class="row">
       <div class="twelve columns">
+        <h2>Software</h2>
         <p>The following software was used in this project:</p>
 
-        <ul>
+        <ol class="rounded-list">
           <li><a href="http://www.librecad.org/">LibreCAD</a> - for 2D design
           work</li>
 
@@ -116,12 +118,62 @@
 
           <li><a href="http://www.ubuntu.com/">Ubuntu Linux</a> - everything
           was run under Ubuntu Linux (specifically 12.04 LTS)</li>
-        </ul>
+        </ol>
       </div>
     </div>
 
     <div class="row">
       <div class="twelve columns">
+        <h2>Observations</h2>
+        <p>Originally, I started the design for this project in Blender,
+        intending to produce the 3D model then use slicing or projection to
+        produce the 2D files required for the CNC router. However, after doing
+        so it became quickly apparent that this is entirely the wrong way to go
+        about things:</p>
+
+        <ol class="rounded-list">
+          <li>Blender isn't a CAD package. While it is quite brilliant for
+          producing artistic 3D models (easily out-stripping simpler tools like
+          SketchUp), if you wish to produce something which is largely based on
+          simple geometric shapes it is overly complex.</li>
+
+          <li>When going from 3D to 2D you have all sorts of annoying things
+          like normal directions to worry about (otherwise your STL files won't
+          work as expected). If you go 2D to 3D all such problems disappear
+          (yes, there are other problems to solve but they're a lot
+          simpler!)</li>
+
+          <li>Apparently, the DXF files produced by some programs leave
+          something to be desired in the compliance with various standards. I'm
+          hoping that by starting off in a "proper" CAD package, the DXF files
+          produced will be decent quality and should work "off the bat".</li>
+        </ol>
+
+        <p>Here is the right method (as least, as far as I know at the moment - this may change after I've done battle with ShopBot!):</p>
+
+        <ol class="rounded-list">
+          <li>Create the layers of your design in a CAD package like
+          LibreCAD</li>
+
+          <li>If you only require the 2D design for CNC purposes, stop
+          here</li>
+
+          <li>If you would like to see a 3D model to check your design, use an
+          OpenSCAD script to extrude the 2D design into 3D (using CSG
+          operations to cut things out as necessary)</li>
+
+          <li>Import the resulting STL model into Blender for texturing and
+          rendering</li>
+
+          <li>Should you require additional vector overlays, import the DXF
+          into Inkscape for post-processing</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+        <h2>Acknowledgements</h2>
         <p>We are extremely grateful to the helpful community at <a
           href="http://www.fablabmanchester.org/">FabLab Manchester</a> for
         their help so far. Hopefully with a bit more, we can build something
@@ -129,15 +181,17 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="twelve columns foot">
-        <p>Copyright &copy; 2012 Dave Hughes. All content presented on this
-        page is published under the terms of the <a
-          href="http://opensource.org/licenses/MIT">MIT open-source
-          license</a>. Please feel free to re-use under the terms of this
-        license.</p>
+    <footer>
+      <div class="row">
+        <div class="twelve columns foot">
+          <p>Copyright &copy; 2012 Dave Hughes. All content presented on this
+          page is published under the terms of the <a
+            href="http://opensource.org/licenses/MIT">MIT open-source
+            license</a>. Please feel free to re-use under the terms of this
+          license.</p>
+        </div>
       </div>
-    </div>
+    </footer>
 
   </div> <!--! end of #container -->
 
